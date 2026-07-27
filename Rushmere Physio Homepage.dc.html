@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="./image-slot.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; background: #fcfdfe; }
+    body { font-family: 'Source Sans 3', sans-serif; color: #46606f; -webkit-font-smoothing: antialiased; }
+    a { color: #35789e; text-decoration: none; }
+    a:hover { color: #1e3a4c; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="min-width: 320px">
+
+<!-- Top bar -->
+<div data-screen-label="Top bar" style="background: #1e3a4c; color: #cfe1ec; font-size: 14px; padding: 8px 24px; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: center; align-items: center">
+  <span>154 Colchester Road, Ipswich IP4 4RS</span>
+  <a href="tel:01473718552" style="color: #ffffff; font-weight: 600">(01473) 718552</a>
+  <a href="mailto:physio@ipswichphysio.com" style="color: #cfe1ec">physio@ipswichphysio.com</a>
+</div>
+
+<!-- Nav -->
+<nav data-screen-label="Navigation" style="position: sticky; top: 0; z-index: 50; background: #ffffff; border-bottom: 1px solid #e3ecf2; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px">
+  <a href="#top" style="display: flex; align-items: center; gap: 10px">
+    <img src="uploads/logo-1785192618979.jpg" alt="Rushmere Physio logo" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover">
+    <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #1e3a4c">Rushmere Physio</span>
+  </a>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-family: Manrope, sans-serif; font-weight: 600; font-size: 15px">
+    <a href="#top" style="color: #46606f">Home</a>
+    <a href="#team" style="color: #46606f">Our Team</a>
+    <a href="#services" style="color: #46606f">Services</a>
+    <a href="#pricing" style="color: #46606f">Pricing</a>
+    <a href="#contact" style="color: #46606f">Contact</a>
+    <a href="{{ bookingUrl }}" style="background: #35789e; color: #ffffff; padding: 11px 24px; border-radius: 999px; font-weight: 700" style-hover="background: #1e3a4c; color: #ffffff">Book Online 24/7</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="top" data-screen-label="Hero" style="max-width: 1140px; margin: 0 auto; padding: 64px 24px 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: center">
+  <div style="display: flex; flex-direction: column; gap: 20px">
+    <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #6ba54a">Chartered Physiotherapy · Ipswich</span>
+    <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px, 5vw, 52px); line-height: 1.1; color: #1e3a4c; margin: 0; text-wrap: pretty">Expert hands-on physiotherapy, close to home</h1>
+    <p style="font-size: 19px; line-height: 1.6; margin: 0; max-width: 46ch">From everyday aches to elite sport — we find what's wrong, and guide you back to doing what you love.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px">
+      <a href="{{ bookingUrl }}" style="background: #35789e; color: #ffffff; padding: 15px 32px; border-radius: 999px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px" style-hover="background: #1e3a4c; color: #ffffff">Book Online 24/7</a>
+      <a href="tel:01473718552" style="border: 2px solid #b9cfe4; color: #1e3a4c; padding: 13px 30px; border-radius: 999px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px" style-hover="border-color: #35789e; color: #35789e">Call (01473) 718552</a>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; color: #7b93a1">
+      <span>HCPC registered</span><span>·</span><span>Wheelchair accessible</span><span>·</span><span>Free off-road parking</span>
+    </div>
+  </div>
+  <div style="min-height: 380px; position: relative">
+    <image-slot id="hero-photo" shape="rounded" radius="20" src="uploads/back massage.avif" placeholder="Calm treatment-room photo — physio working with a patient"></image-slot>
+  </div>
+</header>
+
+<!-- Credibility band -->
+<section data-screen-label="Credibility" style="background: #1e3a4c; padding: 56px 24px">
+  <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 30px; color: #ffffff; margin: 0; text-align: center; text-wrap: pretty">Experience trusted at the highest level</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+      <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #b5e07f">Olympic &amp; Paralympic Games</span>
+        <p style="margin: 0; color: #cfe1ec; line-height: 1.6">Our physiotherapists have worked with athletes on the world's biggest sporting stage.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #b5e07f">Ipswich Town FC</span>
+        <p style="margin: 0; color: #cfe1ec; line-height: 1.6">Professional football experience, keeping players match-fit at the highest level of the game.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; color: #b5e07f">Athletes &amp; everyday patients</span>
+        <p style="margin: 0; color: #cfe1ec; line-height: 1.6">The same expert care for children, adults, desk workers and weekend warriors alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section id="team" data-screen-label="Our Team" style="max-width: 1140px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 40px">
+  <div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; color: #1e3a4c; margin: 0">Meet your physiotherapists</h2>
+    <p style="margin: 0; font-size: 17px; max-width: 60ch">Every physiotherapist at Rushmere Physio is Chartered, HCPC registered, and qualified in acupuncture.</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 28px; justify-items: center">
+    <sc-for list="{{ team }}" as="member" hint-placeholder-count="5">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+        <image-slot id="team-{{ member.slug }}" shape="circle" style="width: 140px; height: 140px" src="{{ member.photo }}" placeholder="Headshot"></image-slot>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px; color: #1e3a4c">{{ member.name }}</span>
+          <span style="font-size: 14px; color: #7b93a1">{{ member.role }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" data-screen-label="Services" style="background: #edf4f9; padding: 72px 24px">
+  <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+    <div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center">
+      <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; color: #1e3a4c; margin: 0">How we can help</h2>
+      <p style="margin: 0; font-size: 17px; max-width: 62ch">Sports injuries, postural issues, trapped nerves, sudden onset pain — acute or chronic, we treat it all.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="6">
+        <div style="background: #ffffff; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(30,58,76,0.06)">
+          <div style="height: 170px; position: relative">
+            <image-slot id="svc-{{ svc.slug }}" shape="rect" src="{{ svc.photo }}" placeholder="Service photo"></image-slot>
+          </div>
+          <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+            <h3 style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 19px; color: #1e3a4c; margin: 0">{{ svc.name }}</h3>
+            <p style="margin: 0; line-height: 1.6">{{ svc.desc }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" data-screen-label="Pricing" style="max-width: 1140px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 40px">
+  <div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; color: #1e3a4c; margin: 0">Appointments &amp; pricing</h2>
+    <p style="margin: 0; font-size: 17px; max-width: 60ch">Clear, upfront pricing. Book instantly online — no referral needed.</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 20px; align-items: stretch">
+    <sc-for list="{{ pricing }}" as="p" hint-placeholder-count="5">
+      <div style="background: #ffffff; border: 1px solid #e3ecf2; border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 8px; text-align: center; align-items: center">
+        <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 18px; color: #1e3a4c; min-height: 44px; display: flex; align-items: center; text-wrap: pretty">{{ p.name }}</span>
+        <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 30px; color: #35789e">{{ p.price }}</span>
+        <span style="font-size: 14px; color: #7b93a1; min-height: 20px">{{ p.duration }}</span>
+        <a href="{{ bookingUrl }}" style="margin-top: auto; background: #35789e; color: #ffffff; padding: 11px 28px; border-radius: 999px; font-family: Manrope, sans-serif; font-weight: 700; font-size: 15px" style-hover="background: #1e3a4c; color: #ffffff">Book Now</a>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- How it works -->
+<section data-screen-label="How physiotherapy works" style="background: #f0f8e6; padding: 72px 24px">
+  <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; color: #1e3a4c; margin: 0; text-align: center">How does physiotherapy work?</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="3">
+        <div style="background: #ffffff; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center">
+          <span style="width: 52px; height: 52px; border-radius: 50%; background: #b5e07f; color: #2c4a12; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; display: flex; align-items: center; justify-content: center">{{ step.num }}</span>
+          <h3 style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 19px; color: #1e3a4c; margin: 0">{{ step.title }}</h3>
+          <p style="margin: 0; line-height: 1.65">{{ step.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Booking CTA -->
+<section data-screen-label="Booking CTA" style="background: #35789e; padding: 64px 24px">
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; align-items: center; text-align: center">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 30px; color: #ffffff; margin: 0; text-wrap: pretty">Not sure we can help? We're confident we will.</h2>
+    <a href="{{ bookingUrl }}" style="background: #b5e07f; color: #1e3a4c; padding: 16px 40px; border-radius: 999px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 17px" style-hover="background: #ffffff; color: #1e3a4c">Book Online 24/7</a>
+    <sc-if value="{{ showHours }}" hint-placeholder-val="{{ true }}">
+      <div style="background: rgba(255,255,255,0.1); border-radius: 14px; padding: 20px 32px; display: grid; grid-template-columns: auto auto; gap: 6px 32px; color: #ffffff; font-size: 16px; text-align: left">
+        <span style="font-weight: 600">Mon – Fri</span><span>07:30 – 20:00</span>
+        <span style="font-weight: 600">Saturday</span><span>07:30 – 15:30</span>
+        <span style="font-weight: 600">Sunday</span><span style="color: #cfe1ec">Closed</span>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" data-screen-label="Contact" style="max-width: 1140px; margin: 0 auto; padding: 72px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start">
+  <div style="display: flex; flex-direction: column; gap: 22px">
+    <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; color: #1e3a4c; margin: 0">Find us</h2>
+    <p style="margin: 0; line-height: 1.65; max-width: 50ch">A purpose-built therapy suite on the outskirts of Ipswich — 3 minutes from Ipswich Hospital, with free off-road parking and wheelchair access via a ramp at the entrance.</p>
+    <div style="display: flex; flex-direction: column; gap: 14px; font-size: 17px">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #7b93a1">Address</span>
+        <span style="color: #1e3a4c">154 Colchester Road, Ipswich IP4 4RS</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #7b93a1">Phone</span>
+        <a href="tel:01473718552" style="font-weight: 600">(01473) 718552</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #7b93a1">Email</span>
+        <a href="mailto:physio@ipswichphysio.com" style="font-weight: 600">physio@ipswichphysio.com</a>
+      </div>
+    </div>
+    <p style="margin: 0; font-size: 15px; color: #7b93a1">Serving Ipswich, Felixstowe, Woodbridge, Colchester and Aldeburgh.</p>
+  </div>
+  <div style="border-radius: 20px; overflow: hidden; border: 1px solid #e3ecf2; min-height: 380px; display: flex">
+    <iframe title="Map — 154 Colchester Road, Ipswich" src="https://www.openstreetmap.org/export/embed.html?bbox=1.16846%2C52.06403%2C1.18946%2C52.07603&amp;layer=mapnik&amp;marker=52.07003%2C1.17896" style="border: 0; width: 100%; min-height: 380px" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer data-screen-label="Footer" style="background: #1e3a4c; padding: 40px 24px; color: #9fb8c7">
+  <div style="max-width: 1140px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <img src="uploads/logo-1785192618979.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover">
+        <span style="font-family: Manrope, sans-serif; font-weight: 700; font-size: 17px; color: #ffffff">Rushmere Physio</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px">
+        <a href="#team" style="color: #9fb8c7">Our Team</a>
+        <a href="#services" style="color: #9fb8c7">Services</a>
+        <a href="#pricing" style="color: #9fb8c7">Pricing</a>
+        <a href="#contact" style="color: #9fb8c7">Contact</a>
+        <a href="{{ bookingUrl }}" style="color: #b5e07f; font-weight: 600">Book Online</a>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.12); padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 13px">
+      <span>© 2026 Rushmere Physio. All physiotherapists are Chartered and HCPC registered.</span>
+      <div style="display: flex; gap: 18px">
+        <a href="#" style="color: #9fb8c7">Privacy Policy</a>
+        <a href="#" style="color: #9fb8c7">Terms</a>
+        <a href="#" style="color: #9fb8c7">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://physio.connect.tm3app.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Booking&quot;},&quot;showHours&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Booking&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      bookingUrl: this.props.bookingUrl ?? "http://physiotherapyinipswich.co.uk/",
+      showHours: this.props.showHours ?? true,
+      team: [
+        { slug: "james", name: "James Lee-Barrett", role: "Lead Physiotherapist", photo: "uploads/james.webp" },
+        { slug: "mark", name: "Mark Alderton", role: "Associate Physiotherapist", photo: "uploads/Mark Alderton Associate Physiotherapist.webp" },
+        { slug: "andrew", name: "Andrew Bannan", role: "Associate Physiotherapist", photo: "uploads/Andrew Bannan Associate Physiotherapist.webp" },
+        { slug: "ryan", name: "Ryan Vicencio", role: "Associate Physiotherapist", photo: "uploads/Ryan Vicencio Associate Physiotherapist.webp" },
+        { slug: "kimberley", name: "Kimberley Maddalena", role: "Associate Physiotherapist", photo: "uploads/kimber.webp" },
+      ],
+      services: [
+        { slug: "physio", name: "Physiotherapy & manipulation", desc: "Hands-on assessment and treatment to restore normal joint movement and get you moving pain-free.", photo: "uploads/neck pain.jpg" },
+        { slug: "sports", name: "Sports injury rehabilitation", desc: "From weekend runners to professional athletes — structured rehab to return you to full performance.", photo: "uploads/feet view running.jpg" },
+        { slug: "acupuncture", name: "Acupuncture", desc: "Fine sterile needles to combat both chronic and acute complaints. All our physios are qualified practitioners.", photo: "uploads/acupunc.jpg" },
+        { slug: "shockwave", name: "Shockwave therapy", desc: "A powerful soundwave treatment that kick-starts the healing process in stubborn tendon problems.", photo: "uploads/shock wave.avif" },
+        { slug: "ostenil", name: "Ostenil® Plus injections", desc: "Hyaluronic acid knee injections to lubricate the joint and ease osteoarthritis pain.", photo: "uploads/arthritis.jpg" },
+        { slug: "injections", name: "Steroid & Arthrosamid injections", desc: "Corticosteroid joint and soft-tissue injections, plus long-lasting Arthrosamid for knee osteoarthritis.", photo: "uploads/injection.jpg" },
+      ],
+      pricing: [
+        { name: "Initial Assessment", price: "from £50", duration: "25–30 minutes" },
+        { name: "Follow-up Session", price: "from £50", duration: "25–30 minutes" },
+        { name: "Corticosteroid Injection", price: "£140", duration: "" },
+        { name: "Ostenil® Plus", price: "£260", duration: "" },
+        { name: "Arthrosamid", price: "£2400", duration: "" },
+      ],
+      steps: [
+        { num: "1", title: "We find out what's wrong", desc: "We start by talking — what's the main issue, how long it's been going on, and what you want to get back to. That alone often points to the problem." },
+        { num: "2", title: "We look at your movement", desc: "Simple movements confirm what we think and add detail. Seeing how you've adapted to the issue is key to fixing it." },
+        { num: "3", title: "We guide you through the fix", desc: "Targeted hands-on treatment, specific exercises and clear advice. Most people notice changes within the first session." },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
